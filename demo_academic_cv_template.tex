@@ -70,9 +70,11 @@
   \vspace{0.36em}%
 }
 
+\newcounter{publication}
 \newcommand{\publication}[3]{%
+  \stepcounter{publication}%
   \hspace*{1.55em}\parbox[t]{0.955\linewidth}{%
-    \textit{#1}\par
+    \llap{\thepublication.\hspace{0.4em}}\textit{#1}\par
     #2 #3
   }\par
   \vspace{0.58em}%
@@ -193,6 +195,7 @@ Institute of Cognitive Science\par
   {Towards Actionable Pedagogical Feedback: A Multi-Perspective Analysis of Mathematics Teaching and Tutoring Dialogue}
   {\textbf{Jannatun Naim}, Jie Cao, Fareen Tasneem, Jennifer Jacobs, Brent Milne, James H. Martin, and Tamara Sumner.
   In Proceedings of the 18th International Conference on Educational Data Mining (EDM), pp. 328--341, 2025.}
+  {}
   
 \publication
   {Harnessing Ensemble of Data Preprocessing and Hand-crafted Features for Irony Detection in Tweets}
